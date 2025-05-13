@@ -23,6 +23,7 @@ public class ProductoControlador {
         return productoServicio.getTodosProductos();
     }
 
+    //Prueba Comentario
     @GetMapping("/productosManual")
     public List<Producto> getProductosManual() {
         return productoServicio.getTodosProductosManual();

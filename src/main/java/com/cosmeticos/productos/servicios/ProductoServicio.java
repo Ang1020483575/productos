@@ -6,4 +6,5 @@ import java.util.List;
 public interface ProductoServicio {
     List<Producto> getTodosProductos();
     List<Producto> getTodosProductosManual();
+    void insertarProducto(Producto pro);
 }

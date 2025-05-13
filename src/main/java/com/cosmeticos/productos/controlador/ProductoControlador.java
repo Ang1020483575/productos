@@ -29,7 +29,7 @@ public class ProductoControlador {
     }
 
     @PostMapping("/insertarProducto")
-    public String insertarUsuario(@RequestBody Producto producto) {
+    public String insertarProducto(@RequestBody Producto producto) {
         productoServicio.insertarProducto(producto);
         return "Producto insertado correctamente";
     }

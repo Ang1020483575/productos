@@ -7,4 +7,5 @@ public interface ProductoServicio {
     List<Producto> getTodosProductos();
     List<Producto> getTodosProductosManual();
     void insertarProducto(Producto pro);
+    void actualizarProducto(Producto pro);
 }

@@ -2,10 +2,7 @@ package com.cosmeticos.productos.controlador;
 
 import com.cosmeticos.productos.modelo.entidades.Producto;
 import com.cosmeticos.productos.servicios.ProductoServicio;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,5 +30,11 @@ public class ProductoControlador {
     public String insertarProducto(@RequestBody Producto producto) {
         productoServicio.insertarProducto(producto);
         return "Producto insertado correctamente";
+    }
+
+    @PutMapping("/actualizarProducto")
+    public  String actualizarProducto(@RequestBody Producto producto){
+        productoServicio.actualizarProducto(producto);
+        return  "Producto actualizado correctamente";
     }
 }

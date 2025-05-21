@@ -31,4 +31,9 @@ public class ProductoImplementacionServicio implements ProductoServicio {
         productoRepositorio.insertarProducto(pro.getNombre(), pro.getDescripcion(), pro.getPrecio(), pro.getStock(), pro.getId_categoria(), pro.getId_proveedor());
     }
 
+    @Override
+    public void actualizarProducto(Producto pro){
+        productoRepositorio.actualizarProducto(pro.getId_producto(), pro.getNombre(), pro.getDescripcion(), pro.getPrecio(), pro.getStock(), pro.getId_categoria(), pro.getId_proveedor());
+    }
+
 }

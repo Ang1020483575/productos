@@ -18,4 +18,9 @@ public interface ProductoRepositorio extends Repository<Producto, Long> {
     @Transactional
     @Query(value = "INSERT INTO cosmeticos.productos (nombre, descripcion, precio, stock, id_categoria, id_proveedor) VALUES (:nombre, :descrip, :precio, :stock, :idCat, :idProv)", nativeQuery = true)
     void insertarProducto(String nombre, String descrip, Long precio, Long stock, Long idCat, Long idProv);
+
+    @Modifying
+    @Transactional
+    @Query(value = "update cosmeticos.productos set nombre = :nombre, descripcion = :descripcion ,precio = :valor,stock = :inventario,id_categoria = :idcatg,id_proveedor = :idproved where id_producto = :idProd", nativeQuery = true)
+    void actualizarProducto(Long idProd, String nombre, String descripcion, Long valor, Long inventario, Long idcatg, Long idproved);
 }

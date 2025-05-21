@@ -26,5 +26,9 @@ public class ProductoImplementacionServicio implements ProductoServicio {
         return productoRepositorio.traerTodo();
     }
 
+    @Override
+    public void insertarProducto(Producto pro) {
+        productoRepositorio.insertarProducto(pro.getNombre(), pro.getDescripcion(), pro.getPrecio(), pro.getStock(), pro.getId_categoria(), pro.getId_proveedor());
+    }
 
 }

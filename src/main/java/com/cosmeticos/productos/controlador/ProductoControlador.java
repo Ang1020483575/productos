@@ -29,5 +29,9 @@ public class ProductoControlador {
         return productoServicio.getTodosProductosManual();
     }
 
+    @PostMapping("/insertarProducto")
+    public String insertarProducto(@RequestBody Producto producto) {
+        productoServicio.insertarProducto(producto);
+        return "Producto insertado correctamente";
     }
 }
